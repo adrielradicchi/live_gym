@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: live_gym_db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5432:5432
+    networks:
+      - app-network
+    volumes:
+      - .docker/pgdata:/var/lib/postgresql/data
+
+networks:
+  app-network:
+    driver: bridge
