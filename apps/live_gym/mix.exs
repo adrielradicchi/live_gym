@@ -36,12 +36,14 @@ defmodule LiveGym.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:bcrypt_elixir, "~> 3.0"},
       {:phoenix_pubsub, "~> 2.1"},
       {:ecto_sql, "~> 3.10"},
       {:postgrex, ">= 0.0.0"},
       {:jason, "~> 1.2"},
       {:swoosh, "~> 1.3"},
-      {:finch, "~> 0.13"}
+      {:finch, "~> 0.13"},
+      {:ecto_soft_delete, "~> 2.0"}
     ]
   end
 
